@@ -1,4 +1,5 @@
 import { createStore, combineReducers } from "redux";
+
 import todosReducer from "./reducers/todosReducer";
 import filterReducer from "./reducers/filterReducer";
 
@@ -7,6 +8,9 @@ const reducers = combineReducers({
   filter: filterReducer,
 });
 
-const store = createStore(reducers);
+const store = createStore(
+  reducers,
+  window._REDUX_DEVTOOLS_EXTENSION__ && window._REDUX_DEVTOOLS_EXTENSION__()
+);
 
 export default store;

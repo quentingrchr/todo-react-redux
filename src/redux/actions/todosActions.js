@@ -3,7 +3,6 @@ export const REMOVE_TODO = "REMOVE_TODO";
 export const TOGGLE_DONE = "TOGGLE_DONE";
 
 export const addTodo = (content) => {
-  console.log("add todo");
   return {
     type: ADD_TODO,
     payload: {

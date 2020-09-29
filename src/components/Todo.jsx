@@ -1,5 +1,6 @@
 import React from "react";
 import { ListGroup, Button, Row, Col, Form } from "react-bootstrap";
+
 import { useDispatch } from "react-redux";
 import { removeTodo, toggleDone } from "../redux/actions/todosActions";
 
@@ -32,10 +33,10 @@ export default function Todo({ done, content, id }) {
         <Row>
           <Col sm={8}>
             <Form.Check
-              onClick={handleDone}
               type="checkbox"
               id={id}
               checked={done}
+              onChange={handleDone}
               label={renderContent()}
             />
           </Col>
